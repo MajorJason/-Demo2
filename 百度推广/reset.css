@@ -1,0 +1,67 @@
+/* CSS Document */
+html, body, div,h1, h2,
+h3, h4, h5, h6, p,
+em, img,b, i,dl, dt, dd,
+ol, ul, li,table, tbody,
+tfoot,thead,tr, th, td {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    /*vertical-align:baseline;*/
+    /*background:transparent;*/
+    list-style: none;
+}
+
+
+body {
+    line-height:1;
+    font-size: 14px;
+}
+
+a{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+
+}
+a:hover,a:focus{
+    text-decoration:none;
+    bblr:expression(this.onFocus=this.blur());/*IE浣跨敤*/
+    outline-style:none;/*FF浣跨敤*/
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.fixed {
+    position: fixed;
+}
+.clearfix :after{
+    content:'';
+    clear:both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    width: 100%;
+}
+.clearfix {
+    zoom:1;
+}

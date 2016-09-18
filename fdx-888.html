@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" href="css/fdx-reset.css"/>
+<style>
+    .header {
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #000000;
+    }
+    .header-l {
+        padding-left: 90px;
+        color: gray;
+        font:100 20px/50px  "microsoft yahei";
+
+    }
+    .header-r {
+        position: relative;
+    }
+    .header-r>ul {
+        padding-right: 90px;
+    }
+
+    .header-r>ul>li {
+       float: left;
+
+   }
+
+        .ul {
+            position: absolute;
+            top: 50px;
+            z-index: 3;
+            display: none;
+    }
+    .header-r a{
+    display: block;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    color: gray;
+    position: relative;
+}
+
+
+   /*轮播图start*/
+
+
+
+
+
+    .all {
+        width: 1440px;
+        height: 657px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .screen {
+        width: 1440px;
+        height: 657px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .screen li {
+        width: 1440px;
+        height:657px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .screen ul {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 4500px;
+    }
+
+    .all ol {
+        position: absolute;
+        right: 45%;
+        bottom: 10px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .all ol li {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: gray;
+        border: 1px solid #ccc;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .all ol li.current {
+        background: white;
+    }
+
+    #arr {
+        display: none;
+    }
+
+    #arr span {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        margin-top: -20px;
+        background: #000;
+        cursor: pointer;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-family: '黑体';
+        font-size: 30px;
+        color: #fff;
+        opacity: 0.3;
+        border: 1px solid #fff;
+    }
+
+    #arr #right {
+        right: 5px;
+        left: auto;
+    }
+
+
+
+   /*轮播图end*/
+
+
+
+    .description {
+        width: 1240px;
+        margin: 0 auto;
+        padding: 55px 0;
+    }
+    .description img {
+        padding: 0 20px;
+    }
+    .description li {
+        float: left;
+        width: 412px;
+        height: 57px;
+
+    }
+    .description .current {
+        border-left: 1px solid #939393;
+        border-right:1px solid #939393;
+    }
+    .description li h3 {
+        font-size: 20px;
+        color: #333333;
+        padding-right: 70px;
+        font-family: "microsoft yahei";
+        height: 23px;
+        text-align: left;
+        cursor: pointer;
+    }
+    .description li p {
+        font-size: 14px;
+        color: #939393;
+        line-height: 28px;
+        text-align: left;
+        cursor: pointer;
+    }
+    .footer {
+        width: 1240px;
+        margin: 0 auto;
+        padding-top: 60px;
+        border-top: 1px solid #e1e1e1;
+    }
+    .footer_links {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .footer_links li {
+        display: inline-block;
+        width: 110px;
+        border-right: 1px solid #d9d9d9;
+        line-height: 14px;
+        height: 14px;
+        zoom: 1;
+
+    }
+    .weixin {
+        position: relative;
+    }
+    .weixin img {
+        position: absolute;
+        left: -20px;
+        width: 150px;
+        height: 150px;
+        bottom: 20px;
+        display: none;
+    }
+    .languages_list {
+        border-right: none;
+    }
+    .copyright {
+        line-height: 20px;
+        color: #c5c6c8;
+        font-size: 11px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+</style>
+
+<body>
+   <div class="header clearfix">
+       <div class="header-l fl">
+           <a href="">MIUI</a>
+       </div>
+       <div class="header-r fr">
+           <ul>
+               <li id="shouye"><a>首页</a>
+
+               </li>
+               <li><a>MIUI 8</a></li>
+               <li><a >下载</a></li>
+               <li><a >解锁</a></li>
+               <li><a>论坛</a></li>
+           </ul>
+       </div>
+   </div>
+<!--轮播图-->
+
+   <div class="all" id='box'>
+       <div class="screen">
+           <ul>
+               <li><img src="images/activity_24.png" width="1440px" height="657px"/></li>
+               <li><img src="images/activity_29.png" width="1440px" height="657px"/></li>
+
+           </ul>
+           <ol>
+           </ol>
+       </div>
+       <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+   </div>
+
+
+   <!--轮播图-->
+   <div class='description clearfix'>
+       <ul class="description-l">
+           <li><img src="images/footer1.png" class="fl"/>
+               <h3 class="fl">minu 发布会没讲的功能</h3>
+               <p class="fl">信息量太大，记得慢慢看</p>
+           </li>
+           <li class="current"><img src="images/footer2.png"class="fl"/>
+               <h3 class="fl">小米miui8发布会完整回顾</h3>
+               <p class="fl">全新升级 数十项优化和更新</p>
+           </li>
+           <li><img src="images/footer-3.png" class="fl"/>
+               <h3 class="fl"> miui第289周更新</h3>
+               <p class="fl">Miui开发版来了</p>
+           </li>
+       </ul>
+   </div>
+
+   <div class="footer">
+       <ul class="footer_links">
+           <li><a target="_blank" href="http://weibo.com/miui">新浪微博</a></li>
+           <li class="weixin" id="weixin">
+               <a href="javascript:void(0);">官方微信
+               </a>
+           </li>
+           <li><a target="_blank" href="http://tieba.baidu.com/f?kw=miui">官方贴吧</a></li>
+           <li><a target="_blank" href="http://www.miui.com/fans.php">全球粉丝站</a></li>
+           <li class="language_list"><a target="_blank" href="http://www.miui.com">简体中文</a>
+
+           </li>
+       </ul>
+       <p class="copyright">
+           Copyright © 2016 MIUI 京ICP备10046444号 | 京公网安备11010802020134号 | 京ICP证110507号
+       </p>
+   </div>
+   <script>
+
+
+       var box=document.getElementById("box");
+       var screen=box.children[0];
+       var arr=box.children[1];
+       var ul=screen.children[0];
+       var ol=screen.children[1];
+       var left=document.getElementById('left');
+       var right=document.getElementById('right');
+       var index=0;
+       var olindex=0;
+       var imgwidth=screen.offsetWidth;
+       var count=ul.children.length;
+       for(var i=0;i<count;i++){
+           var li=document.createElement('li');
+           ol.appendChild(li);
+
+           li.index=i;
+
+
+           //第一个ol 的li高亮显示；
+           ol.children[0].className = "current";
+           li.onclick= function () {
+               for(i=0;i<ol.children.length;i++){
+                   li=ol.children[i];
+                   li.removeAttribute('class');
+               }
+
+               this.className="current";
+               //移动图片的位置；
+               ul.style.left=-imgwidth*this.index+'px';
+               this.index=olindex=index;
+           }
+       }
+       //  鼠标移入显示隐藏；
+       box.onmouseover= function () {
+//          arr.style.display='block';
+           clearInterval(timerId);
+       }
+       box.onmouseout= function () {
+           arr.style.display='none';
+           timerId=setInterval(function () {
+               right.click();
+           },2000)
+
+       }
+
+       //注册事件；
+       right.onclick= function () {
+           if(index===count){
+               index = 0 ;
+               ul.style.left=0+'px';
+           }
+           index++;
+           ul.style.left=-index*imgwidth+'px';
+
+           if(olindex <count-1){
+               olindex++;
+           }else{
+               olindex=0;
+           }
+           for(var i=0;i<ol.children.length;i++){
+               li=ol.children[i];
+               li.removeAttribute('class');
+           }
+           ol.children[olindex].className='current';
+
+       }
+
+       left.onclick= function () {
+           if(index === 0){
+               index=count;
+               ul.style.left=-index*imgwidth+'px';
+           }
+           index--;
+           ul.style.left=-index*imgwidth+'px';
+
+           if(olindex==0){
+               olindex=count-1;
+           }else{
+               olindex--;
+           }
+           for(var i=0;i<ol.children.length;i++){
+               li=ol.children[i];
+               li.removeAttribute('class');
+           }
+           ol.children[olindex].className='current';
+       }
+
+
+       var timerId=  setInterval(function () {
+           right.click();
+       },2000)
+
+       //添加图片
+       var firstli=ul.children[0];
+       var cloneli=firstli.cloneNode(true);
+       ul.appendChild(cloneli);
+   </script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="reset.css"/>
+    <style>
+        /*//版心；*/
+    .banxin {
+        width: 980px;
+        margin: 0 auto;
+    }
+        .header {
+            height: 70px;
+        }
+        .header img {
+            padding-top: 11px;
+        }
+        .address {
+            margin: 25px 0 0 10px;
+            padding: 3px;
+            border: 1px solid #999999;
+        }
+        .address span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .header-ul {
+            margin-top: 20px;
+        }
+        .header-ul li{
+            float: left;
+            font-family: 'Microsoft YaHei',"微软雅黑",STHeiti,Helvetica,Arail;
+            padding: 0 24px;
+        }
+        .header-ul li a {
+            color: #244243;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .header-ul-li a{
+            color: #1977df;
+        }
+        /*<!--//轮播图start-->*/
+
+        .all {
+            width: 1420px;
+            height: 399px;
+            padding: 7px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 1420px;
+            height: 399px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 1420px;
+            height:399px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 8670px;
+        }
+
+        .all ol {
+            position: absolute;
+            right: 45%;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: gray;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .all ol li.current {
+            background: white;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+        /*<!--//轮播图end-->*/
+        .page {
+            padding:50px 0 30px 0;
+        }
+        .page h2 {
+            font-size: 50px;
+            text-align: center;
+            color: #222;
+        }
+        .page-nav {
+            width: 784px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 50px 0;
+            zoom:1;
+            height: 52px;
+        }
+        .page-nav a {
+            display: inline-block;
+            width: 195px;
+            height: 52px;
+            color: #3d3d3d;
+            margin-left: -1px;
+            border: 1px solid #dadee6;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            line-height: 52px;
+            border-radius: 4px;
+        }
+        .page-nav a:hover {
+            background: #1977df;
+            color: #fff;
+        }
+        .f-box  h3 {
+            font-size: 30px;
+            color: #222;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+      .f-box p {
+            font-size: 16px;
+            line-height: 30px;
+            padding-bottom: 5px;
+            color: #3d3d3d;
+            text-align: center;
+        }
+    .f-box .morel {
+        font-size: 14px;
+        color: #1977df;
+    }
+    .blue {
+        text-align: center;
+        padding: 40px 0;
+        color: #ffffff;
+        background-color: #1977df;
+        font-weight: normal;
+        font-family: 'Microsoft YaHei',"微软雅黑",STHeiti,Helvetica,Arail;
+    }
+    .blue h4 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .blue a {
+        display: inline-block;
+        width: 148px;
+        height: 28px;
+        line-height: 28px;
+        color: #1977df;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+        /*<!--//推广介绍end-->*/
+
+
+        /*免费注册start*/
+        .apply {
+            padding: 70px 0 60px 0 ;
+            background-color: #f5f5f5;
+        }
+        .apply h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+        .apply-msg {
+            text-align: center;
+            color:red;
+            font-size: 14px;
+            line-height: 50px;
+        }
+        .ipt  li {
+            float: left;
+            width: 50%;
+            margin: 0 0 15px;
+        }
+        .ipt span {
+            background: url("images/red.png") no-repeat right center;
+            width: 85px;
+            display: inline-block;
+        }
+        .ipt_1 {
+            width: 340px;
+            height: 35px;
+            margin-left: 5px;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+        }
+        .btn {
+            width: 460px;
+            height: 52px;
+            background-color: #1977df;
+            margin: 0 auto;
+            border: 0;
+            font-size:18px;
+            color: #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        /*免费注册end*/
+
+
+
+
+
+        /*固定定位s*/
+        .free {
+            width: 300px;
+            height: 50px;
+            position: fixed;
+            right: 0px;
+            bottom: 30px;
+        }
+        .free .suprise {
+            width: 48px;
+            /*height: 40px;*/
+            /*position: fixed;*/
+            /*right: 0px;*/
+            /*bottom: 30px;*/
+            float: right;
+            /*background: #1977df;*/
+            color: #1977df;
+            border: 1px solid #1977df;  
+            font-size: 16px;
+            padding: 9px 5px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .fix {
+            width: 48px;
+            height: 40px;
+            position: fixed;
+            right: 0px;
+            bottom:115px;
+            background-color: #1977df;
+            padding: 9px 5px;
+        }
+        .phone {
+            font-size: 40px;
+            height: 41px;
+            background:#1977df;
+            color: #ffffff;
+            display: none;
+            padding: 6px 5px 0 10px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        /*固定定位e*/
+    </style>
+</head>
+<body>
+  <!--//头部start-->
+  <div class="header banxin">
+      <img src="images/logo.png" class="fl" />
+      <div class="address fl">上海 <span>ˇ</span></div>
+      <ul class="header-ul fr">
+          <li class="header-ul-li"><a href="#">首页</a></li>
+          <li><a href="#">产品与服务</a></li>
+          <li><a href="#">解决方案</a></li>
+          <li><a href="#">成功案例</a></li>
+          <li><a href="#">动态资讯</a></li>
+      </ul>
+  </div>
+
+  <!--//头部end-->
+  <!--//推广介绍start-->
+
+<!--//轮播图start-->
+  <div class="all clearfix" id='box'>
+      <div class="screen">
+          <ul>
+              <li><img src="images/1.jpg" width="1440" height="399"/></li>
+              <li><img src="images/2.jpg" width="1440" height="399"/></li>
+              <li><img src="images/3.jpg" width="1440" height="399"/></li>
+              <li><img src="images/4.jpg" width="1440" height="399"/></li>
+              <li><img src="images/5.jpg" width="1440" height="399"/></li>
+          </ul>
+          <ol>
+          </ol>
+      </div>
+      <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+  </div>
+
+<!--//轮播图end-->
+
+
+<!--//推广介绍start-->
+  <div class="page">
+      <h2>百度推广，让营销更有效率</h2>
+      <div class="page-nav"id="page-f">
+          <a href="javascript:;" class="first">我要拓展新客户</a>
+          <a href="javascript:;" class="">我要做移动推广</a>
+          <a href="javascript:;" class="active">我要提升企业品牌</a>
+          <a href="javascript:;" class="last">我要发展O2O</a>
+      </div>
+      <div id="page-fy">
+          <div class="f-box" style="display:block">
+              <h3>你的客户，正在百度上找你</h3>
+              <p class="center">
+              百度推广基于服务数十万中小企业的经验，深刻理解企业推广的真实需求，利用自身搜索技术、流量资源<br>等领先优势，将您的企业信息以丰富多彩的样式展现给有需求的客户，并促使其与您产生更多互动，最终
+              <br>达成交易，从而有效地帮您拓展客户。
+              </p>
+              <p><a href="javascript:;" class="morel">进一步了解</a></p>
+          </div>
+          <div class="f-box" style="display:none">
+              <h3>百度移动推广，让客户随时随地找到你</h3>
+              <p class="center">
+                  利用百度移动平台的强大流量资源与用户资源，把您的企业信息即时地展现在有需求的移动用户面前，促 <br/>
+                  使用户关注您的企业产品与服务，并进一步与您的企业建立深入沟通，最终达成交易。</p>
+              <p><a href="javascript:;" class="morel">进一步了解</a></p>
+          </div>
+          <div class="f-box" style="display:none">
+              <h3>是品牌，总会被百度搜索</h3>
+              <p class="center">
+                  在亿万网民搜索您的品牌或相关内容时，百度推广即时展现您的品牌信息，帮您树立品牌形象，发挥品牌<br/>
+                  在互联网上“营销收口”的核心功能；根据企业不同发展阶段的需求，以文字、图片、视频等丰富的创意<br/>
+                  形式，让网民有效地认识您、了解您、喜欢您及信任您
+              </p>
+              <p>
+                  <a href="javascript:;" class="morel">进一步了解</a>
+              </p>
+          </div>
+          <div class="f-box" style="display:none">
+          <h3>百度o2o,连接3600行</h3>
+          <p class="center">
+              百度本地直通车以移动搜索推广及应用推荐的方式，将商户的推广信息精准地展现给周边5-30公里内有需<br/>
+              求的顾客，以多种创意团单吸引顾客在商户的网上店铺页面完成在线交易，从而帮助本地服务商户轻松<br/>
+              “找到顾客”、“收到钱”！<br/>
+          </p>
+          <p>
+              <a href="#" class="morel">进一步了解</a>
+          </p>
+      </div>
+      </div>
+  </div>
+
+  <div class="blue">
+      <h4>百度推广帮助中心，帮你快速开启精准营销之旅</h4>
+      <a href="../index.html">了解点东西看看？</a>
+  </div>
+<!--//推广介绍end-->
+
+
+<!--//免费注册start-->
+  <div class="apply">
+      <h2>免费注册百度推广</h2>
+      <p class="apply-msg">
+
+          留下你的联系信息，我们会有专用营销顾问与你联系，一对一为你详细介绍百度推广相关产品和服务，帮你
+          更高效的开展网络营销。
+      </p>
+      <div class="ipt banxin">
+          <ul>
+              <li><span>联系人  </span><input class="ipt_1" type="text" placeholder="  请填写负责人的真实姓名"/></li>
+              <li><span>联系人手机  </span><input class="ipt_1" type="text"/></li>
+              <li><span>公司所在地  </span><input class="ipt_1" type="text"/></li>
+              <li><span>公司名称  </span><input class="ipt_1" type="text"/></li>
+          </ul>
+      </div>
+      <button class="btn">立即注册</button>
+  </div>
+<!--//免费注册end-->
+  <!-- foot start-->
+
+  <!-- foot end-->
+
+  <!--固定定位s -->
+    <div class="free">
+
+        <p class="suprise fr" id="suprise">
+        点我 <br/>惊喜
+        </p>
+        <p class="phone fr" id="phone">哈哈 傻逼</p>
+    </div>
+        <div class="fix">
+            免费 <br/>咨询
+        </div>
+
+  <!--固定定位e-->
+  <script src='jquery-1.12.4.js'></script>
+  <script>
+      $(function () {
+          $('#suprise').mouseenter(function () {
+              $('#phone').show();
+          });
+          $('#suprise').mouseleave(function () {
+              $('#phone').hide();
+          })
+      })
+
+
+
+
+
+      var page =document.getElementById('page-f');
+      var as=page.getElementsByTagName('a');
+      var page_fy=document.getElementById('page-fy');
+      var divs=page_fy.getElementsByTagName('div');
+
+      for(var i=0;i<as.length;i++){
+          var a=as[i];
+          a.setAttribute('num',i);
+          a.onmouseover= function () {
+              for(var i=0;i<divs.length;i++){
+                  var div =divs[i];
+                  div.style.display='none';
+                 var number =this.getAttribute('num');
+                   divs[number].style.display='block';
+              };
+          };
+
+      }
+
+      var box=document.getElementById("box");
+      var screen=box.children[0];
+      var arr=box.children[1];
+      var ul=screen.children[0];
+      var ol=screen.children[1];
+      var left=document.getElementById('left');
+      var right=document.getElementById('right');
+      var index=0;
+      var olindex=0;
+      var imgwidth=screen.offsetWidth;
+      var count=ul.children.length;
+      for(var i=0;i<count;i++){
+          var li=document.createElement('li');
+          ol.appendChild(li);
+
+          li.index=i;
+
+
+          //第一个ol 的li高亮显示；
+          ol.children[0].className = "current";
+          li.onclick= function () {
+              for(i=0;i<ol.children.length;i++){
+                  li=ol.children[i];
+                  li.removeAttribute('class');
+              }
+
+              this.className="current";
+              //移动图片的位置；
+              ul.style.left=-imgwidth*this.index+'px';
+              this.index=olindex=index;
+          }
+      }
+      //  鼠标移入显示隐藏；
+      box.onmouseover= function () {
+         arr.style.display='block';
+
+          clearInterval(timerId);
+      }
+      box.onmouseout= function () {
+          arr.style.display='none';
+          timerId=setInterval(function () {
+              right.click();
+          },800)
+
+      }
+
+      //注册事件；
+      right.onclick= function () {
+          if(index===count){
+              index = 0 ;
+              ul.style.left=0+'px';
+          }
+          index++;
+          ul.style.left=-index*imgwidth+'px';
+
+          if(olindex <count-1){
+              olindex++;
+          }else{
+              olindex=0;
+          }
+          for(var i=0;i<ol.children.length;i++){
+              li=ol.children[i];
+              li.removeAttribute('class');
+          }
+          ol.children[olindex].className='current';
+
+      }
+
+      left.onclick= function () {
+          if(index === 0){
+              index=count;
+              ul.style.left=-index*imgwidth+'px';
+          }
+          index--;
+          ul.style.left=-index*imgwidth+'px';
+
+          if(olindex==0){
+              olindex=count-1;
+          }else{
+              olindex--;
+          }
+          for(var i=0;i<ol.children.length;i++){
+              li=ol.children[i];
+              li.removeAttribute('class');
+          }
+          ol.children[olindex].className='current';
+      }
+
+
+      var timerId=  setInterval(function () {
+          right.click();
+      },800)
+
+      //添加图片
+      var firstli=ul.children[0];
+      var cloneli=firstli.cloneNode(true);
+      ul.appendChild(cloneli);
+  </script>
+</body>
+</html>
